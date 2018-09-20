@@ -130,3 +130,19 @@ const Child = styled.nav`
     background: blue;
   }
 ```
+
+---
+
+## Exercise 3
+
+10 Minutes
+
+What are some ways to refactor primary-block and secondary-block into a single component?
+
+https://stackblitz.com/edit/css-refactoring-example
+
+---
+
+## My Answer...
+
+https://stackblitz.com/edit/solved-css-refactoring-example

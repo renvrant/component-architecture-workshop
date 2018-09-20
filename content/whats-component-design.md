@@ -95,3 +95,69 @@ How your component interacts with the rest of your system, including other compo
 - Enforcing good markup - alt tag for the icon, semantic p tag for the text
 - If it changes, it changes in one spot
 - If you need to add a new error message, you don't need to think about it
+
+---
+
+## Exercise 1
+
+5 Minutes
+
+Start building a rating component. It needs to:
+- Show an image and title of what is being rated
+- Accept a rating value to display
+- Allow the user to click on a star to rate the item
+
+---
+
+![Rating Component](img/starratingcomponent.png "Rating Component")
+
+---
+
+## Part 2:
+
+5 Minutes
+
+Discuss:
+- How did you start your planning?
+- How did you approach breaking the component down?
+- What worked? What didn't?
+
+---
+
+## Think about how it's used and work backwards
+
+---
+
+![Rating Component](img/starratingbreakdown.png "Rating Component")
+
+---
+
+```html
+<star-rating [rating]="3.5">
+  <star-button (click)="handleRating(1)"></star-button>
+  <star-button (click)="handleRating(2)"></star-button>
+  <star-button (click)="handleRating(3)"></star-button>
+  <star-button (click)="handleRating(4)"></star-button>
+  <star-button (click)="handleRating(5)"></star-button>
+</star-rating>
+```
+
+---
+
+```html
+<star-rating [rating]="3.5" [max]="5" (onRate)="handleRating($event)">
+</star-rating>
+```
+
+---
+
+```
+// Inside of star-rating...
+<star-button *ngFor="let starNumber of max"
+             [value]="getStarValue(starNumber)"
+             (click)="onRate.emit(starNumber)"
+             class="pr1 dib"
+>
+  {{ starNumber }}
+</star-button>
+```

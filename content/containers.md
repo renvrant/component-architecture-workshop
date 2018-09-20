@@ -68,3 +68,18 @@
 - Action dispatching
 - Data retrieval
 - Decision making about child components
+
+---
+
+## Exercise 4
+
+15 minutes
+
+How can you simplify the following component?
+
+https://stackblitz.com/edit/container-io-refactor-example
+
+---
+
+## My Answer...
+

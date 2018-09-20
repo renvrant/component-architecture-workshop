@@ -57,7 +57,7 @@ class BadCatPic {
 @Component({
   template:
   `<ng-container *ngIf="!loading">
-     <cw-img [url]="picUrl" [id]="id"></cw-img>
+     <cw-img [url]="cat.picUrl" [id]="cat.id"></cw-img>
      <ng-content></ng-content>
   </ng-container>`
 })
@@ -68,7 +68,7 @@ class GoodCatPic {
     };
     
     get loading(): boolean {
-      return !Boolean(this.person);
+      return !Boolean(this.cat);
     }
 }
 ```
@@ -76,11 +76,24 @@ class GoodCatPic {
 ---
 
 ```html
-<best-cat-pic *ngIf="cat" [cat]="cat">
+<better-cat-pic *ngIf="cat" [cat]="cat">
     My cat is very cool and important
-</best-cat-pic>
+</better-cat-pic>
 ```
 
+---
+
+```js
+@Component({
+  template:
+  `<cw-img [url]="url" [id]="id"></cw-img>
+   <ng-content></ng-content>`
+})
+class MoreCatPic {
+    @Input() url: string;
+    @Input() id: string;
+}
+```
 ---
 
 ## Props vs. Content Projection
@@ -98,6 +111,13 @@ class GoodCatPic {
 - Arbitrary text or other content
 - Content that may take many different forms
 - Elements that the component is only responsible for formatting
+
+---
+
+## Content projection benefits
+- Users can supply their own formatting
+- More flexible structure
+- Often more readable
 
 ---
 

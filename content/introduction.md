@@ -3,6 +3,11 @@ Renee Vrantsidis
 
 ---
 
+## Slides
+https://github.com/renvrant/component-architecture-workshop
+
+---
+
 ## Agenda
 - Introduction
 - What is Component Design?

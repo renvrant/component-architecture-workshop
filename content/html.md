@@ -177,3 +177,19 @@ items.map(item => (
     </React.Fragment>
 ));
 ```
+
+---
+
+## Exercise 2
+
+10 Minutes
+
+- Refactor the template of the expansion component
+
+https://stackblitz.com/edit/html-refactoring-exercise
+
+---
+
+## My Answer...
+
+https://stackblitz.com/edit/solved-html-refactoring-exercise
