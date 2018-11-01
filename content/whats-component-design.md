@@ -1,7 +1,5 @@
 # What is component design?
 
-Note: We will talk about it
-
 ---
 
 ## Components have several considerations
@@ -53,6 +51,10 @@ How your component interacts with the rest of your system, including other compo
 
 ---
 
+## But how do I break my components down?
+
+---
+
 ## Responsibility over size
 - Components should have a single responsibility
 - In order to achieve this, you will need to have many components of different sizes
@@ -64,7 +66,7 @@ How your component interacts with the rest of your system, including other compo
 
 ## Did you have to:
 - Copy and paste an element or string of tachyons classes?
-- Enlarge your window to view the whole template at once?
+- Add a new edge case for an existing component?
 - Ask yourself "is this a component?"
 
 ---
@@ -76,7 +78,7 @@ How your component interacts with the rest of your system, including other compo
 ```html
 <p class="error-message block red mt0">
     <img src="alert.svg" alt="">
-    Oops! You got an error! 
+    Oops! You got an error!
 </p>
 ```
 
@@ -84,7 +86,7 @@ How your component interacts with the rest of your system, including other compo
 
 ```html
 <error-message icon="true">
-    Oops! You got an error! 
+    Oops! You got an error!
 </error-message>
 ```
 
@@ -100,7 +102,7 @@ How your component interacts with the rest of your system, including other compo
 
 ## Exercise 1
 
-5 Minutes
+2 Minutes
 
 Start building a rating component. It needs to:
 - Show an image and title of what is being rated
@@ -115,20 +117,21 @@ Start building a rating component. It needs to:
 
 ## Part 2:
 
-5 Minutes
+3 Minutes
 
 Discuss:
-- How did you start your planning?
+- Where did you start your planning?
 - How did you approach breaking the component down?
 - What worked? What didn't?
 
 ---
 
-## Think about how it's used and work backwards
+
+![Rating Component](img/starratingbreakdown.png "Rating Component")
 
 ---
 
-![Rating Component](img/starratingbreakdown.png "Rating Component")
+## Think about how it's used and work backwards
 
 ---
 
@@ -151,8 +154,7 @@ Discuss:
 
 ---
 
-```
-// Inside of star-rating...
+```html
 <star-button *ngFor="let starNumber of max"
              [value]="getStarValue(starNumber)"
              (click)="onRate.emit(starNumber)"

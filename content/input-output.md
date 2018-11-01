@@ -33,7 +33,7 @@ Components should require only the minimum amount of data they need to function
 
 ```js
 @Component({
-  template: 
+  template:
   `<ng-container *ngIf="!data.loading">
      <cw-img [url]="cat.picUrl" [id]="cat.id"></cw-img>
      {{ caption }}
@@ -66,7 +66,7 @@ class GoodCatPic {
       picUrl: string,
       id: number,
     };
-    
+
     get loading(): boolean {
       return !Boolean(this.cat);
     }
@@ -83,17 +83,18 @@ class GoodCatPic {
 
 ---
 
-```js
-@Component({
-  template:
-  `<cw-img [url]="url" [id]="id"></cw-img>
-   <ng-content></ng-content>`
-})
-class MoreCatPic {
-    @Input() url: string;
-    @Input() id: string;
-}
+## Use safe defaults
+
+---
+
 ```
+@Input cats: cat[] = [];
+```
+
+---
+
+## Create usable data as high up as possible
+
 ---
 
 ## Props vs. Content Projection

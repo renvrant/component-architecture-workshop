@@ -1,10 +1,10 @@
+
 # Component Architecture and Design
-Renee Vrantsidis
 
 ---
 
 ## Slides
-https://github.com/renvrant/component-architecture-workshop
+https://bit.ly/2CS7gJr
 
 ---
 
@@ -24,7 +24,6 @@ https://github.com/renvrant/component-architecture-workshop
 ---
 
 ## ... But we sometimes take them for granted
-(HTML and CSS? Easy stuff!)
 
 ---
 
@@ -45,10 +44,6 @@ Note: When we don't think about components, we don't get the full value of the f
 ---
 
 ## ... Which can make them a bit of a dumping ground
-
----
-
-![No Selectors?](img/noselectors.png)
 
 ---
 
@@ -82,7 +77,7 @@ In other words...
 
 ---
 
-## Components are 
+## Components are
 # important!
 
 ---
@@ -120,8 +115,3 @@ Explain those choices to your teammates
 # 3
 Use what you've learned right away
 
----
-
-(Hopefully)
-
-Note: Housekeeping note, my examples will lean angular
